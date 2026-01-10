@@ -22,4 +22,22 @@ States    : Empty(0)  Almost Empty(1)  Partial conditio(2-5)  Almost Full(6)  Fu
 <h3><u>Features:</u></h3>
 
 FSM states:
-         Input
+         INPUT → EMPTY → PARTIALLY FULL → FULL → OUTPUT
+         
+Explanation:
+
+EMPTY (0): No data, read disabled, write enabled
+
+PARTIALLY FULL (1 → N-1): Some data, read and write both enabled
+
+FULL (N): All entries occupied, write disabled, read enabled
+
+🔸Binary and Gray-code address generation for metastability-resilient pointer movement.
+
+🔸2-flip-flop synchronizers for reliable cross-domain pointer transfer.
+
+🔸Gray↔Binary converters to maintain CDC safety while enabling binary-domain comparisons.
+
+🔸Full/Empty flag logic driven by synchronized pointers.
+
+
