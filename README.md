@@ -4,4 +4,9 @@
                
 This project implements a fully parameterized Asynchronous FIFO in Verilog HDL to enable safe and reliable data transfer between independent clock domains. The design follows CDC-safe methodologies, utilizing Gray-code pointers and 2-flip-flop synchronizers to mitigate metastability issues. Binary pointers are used for internal memory addressing, while Gray-coded pointers handle cross-domain communication. Full and Empty flags are generated using synchronized pointers to ensure stable, glitch-free control. The FIFO supports configurable data width and depth, and its functionality is validated through simulation under wrap-around conditions, simultaneous read/write operations, and boundary cases.
 
+<h3><u>Problem statement:</u></h3>h3>
 
+In multi-clock digital systems, direct data transfer between asynchronous clock domains can cause metastability and data corruption.
+This project addresses the problem by designing a CDC-safe Asynchronous FIFO in Verilog HDL.
+The FIFO ensures reliable data transfer using Gray-code pointers and synchronized control logic.
+Correct operation is maintained under clock mismatch, pointer wrap-around, and boundary conditions
