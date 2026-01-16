@@ -50,4 +50,8 @@ Language: Verilog HDL
 
 Verification: Vivado Simulator / Testbench for functional validation
 
+<h3><u>  FSM States: </u></h3>
+
+
+
 
