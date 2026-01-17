@@ -111,14 +111,19 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
-<h3><u>design.v:</u></h3>
+<h3><u>Design.v:</u></h3>
 This design implements an asynchronous FIFO that allows safe data transfer between two independent clock domains (wr_clk and rd_clk). Design code for Asynchronous FIFO is given below
 https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/4ce28261f496cd185193f750b2570918b65af8d4/FILES/design
 
-<h3><u>testbench.v:</u></h3>
+<h3><u>Testbench:</u></h3>
 The testbench verifies the functionality of the asynchronous FIFO by generating independent write and read clocks, applying reset, and driving controlled write and read enable signals.
 The Testbench code for Asyynchronous FIFO is given below
 https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/dcd3d1ff93411345b0300af3cae70f11f1e331e9/FILES/testbench
+
+<h3><u>Simulation & Waveform:</u></h3>
+This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
+<img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/81e0a436-21f1-4e77-87ca-c9984ef71c64" />
+
 
 
 
