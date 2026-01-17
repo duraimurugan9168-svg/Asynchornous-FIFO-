@@ -240,9 +240,7 @@ module asyncfifo #(
 
      assign almost_empty = (fifo_count <= 1) && !empty;
      assign almost_full  = (fifo_count >= (DEPTH - 2)) && !full;
-
-
-endmodule
+     endmodule
 
 
 
