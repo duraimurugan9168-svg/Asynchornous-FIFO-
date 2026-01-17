@@ -111,6 +111,12 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
+**Simulation Waveform:**
+
+This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
+
+<img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/3f8d0c22-b945-4276-bac6-70150a6a1cc2" />
+
 
 
 
