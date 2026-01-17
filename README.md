@@ -111,13 +111,140 @@ Indicates no unread data is available
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
 
-<h3><u>Simulation Waveform:</u></h3>
+<h3><u>Design:</u></h3>
+`timescale 1ns / 1ps
 
- This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers. The verilog design code for Asynchronous FIFO is given in the link below 
 
-https://github.com/duraimurugan9168-svg/Asynchornous-FIFO-/blob/4ce28261f496cd185193f750b2570918b65af8d4/FILES/design   
+module asyncfifo #(
+    parameter DATA_WIDTH = 8,
+    parameter ADDR_WIDTH = 3,
+    parameter AF_MARGIN  = 1,
+    parameter AE_MARGIN  = 1
+)(
+    input  wire                   wr_clk,     // Write clock
+    input  wire                   rd_clk,     // Read clock
+    input  wire                   rst,        // Global reset (async assert)
 
-<img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/3f8d0c22-b945-4276-bac6-70150a6a1cc2" />
+    input  wire                   wr_en,      // Write enable (1 clk pulse)
+    input  wire                   rd_en,      // Read enable (1 clk pulse)
+    input  wire [DATA_WIDTH-1:0]  din,        // Write data
+
+    output reg  [DATA_WIDTH-1:0]  dout,       // Read data
+    output wire                   full,       // FIFO full flag
+    output wire                   empty,      // FIFO empty flag
+    output wire                   almost_full,
+    output wire                   almost_empty,
+    output reg                    overflow,   // Latched overflow
+    output reg                    underflow   // Latched underflow
+);
+
+    localparam DEPTH = 1 << ADDR_WIDTH;
+
+    // ================= MEMORY BLOCK =================
+    reg [DATA_WIDTH-1:0] mem [0:DEPTH-1];
+
+    // ================= POINTER BLOCK =================
+    reg [ADDR_WIDTH:0] wr_ptr_bin  = 0;
+    reg [ADDR_WIDTH:0] wr_ptr_gray = 0;
+    reg [ADDR_WIDTH:0] rd_ptr_bin  = 0;
+    reg [ADDR_WIDTH:0] rd_ptr_gray = 0;
+
+    // ================= SYNC POINTER BLOCK =================
+    reg [ADDR_WIDTH:0] rd_ptr_gray_sync1 = 0;
+    reg [ADDR_WIDTH:0] rd_ptr_gray_sync2 = 0;
+    reg [ADDR_WIDTH:0] wr_ptr_gray_sync1 = 0;
+    reg [ADDR_WIDTH:0] wr_ptr_gray_sync2 = 0;
+
+    // ================= FUNCTIONS BLOCK =================
+    function [ADDR_WIDTH:0] bin2gray(input [ADDR_WIDTH:0] bin);
+        bin2gray = (bin >> 1) ^ bin;
+    endfunction
+
+    function [ADDR_WIDTH:0] gray2bin(input [ADDR_WIDTH:0] gray);
+        integer i;
+        begin
+            gray2bin[ADDR_WIDTH] = gray[ADDR_WIDTH];
+            for (i = ADDR_WIDTH-1; i >= 0; i = i - 1)
+                gray2bin[i] = gray2bin[i+1] ^ gray[i];
+        end
+    endfunction
+
+    // ================= WRITE LOGIC BLOCK =================
+    always @(posedge wr_clk or posedge rst) begin
+        if (rst) begin
+            wr_ptr_bin  <= 0;
+            wr_ptr_gray <= 0;
+            overflow    <= 0;
+        end else begin
+            if (wr_en && !full) begin
+                mem[wr_ptr_bin[ADDR_WIDTH-1:0]] <= din;
+                wr_ptr_bin  <= wr_ptr_bin + 1;
+                wr_ptr_gray <= bin2gray(wr_ptr_bin + 1);
+            end else if (wr_en && full) begin
+                overflow <= 1;
+            end
+        end
+    end
+
+    // ================= READ LOGIC BLOCK =================
+    always @(posedge rd_clk or posedge rst) begin
+        if (rst) begin
+            rd_ptr_bin  <= 0;
+            rd_ptr_gray <= 0;
+            dout        <= 0;
+            underflow   <= 0;
+        end else begin
+            if (rd_en && !empty) begin
+                dout <= mem[rd_ptr_bin[ADDR_WIDTH-1:0]];
+                rd_ptr_bin  <= rd_ptr_bin + 1;
+                rd_ptr_gray <= bin2gray(rd_ptr_bin + 1);
+            end else if (rd_en && empty) begin
+                underflow <= 1;
+            end
+        end
+    end
+
+    // ================= POINTER SYNC BLOCK =================
+    always @(posedge wr_clk or posedge rst) begin
+        if (rst) begin
+            rd_ptr_gray_sync1 <= 0;
+            rd_ptr_gray_sync2 <= 0;
+        end else begin
+            rd_ptr_gray_sync1 <= rd_ptr_gray;
+            rd_ptr_gray_sync2 <= rd_ptr_gray_sync1;
+        end
+    end
+
+    always @(posedge rd_clk or posedge rst) begin
+        if (rst) begin
+            wr_ptr_gray_sync1 <= 0;
+            wr_ptr_gray_sync2 <= 0;
+        end else begin
+            wr_ptr_gray_sync1 <= wr_ptr_gray;
+            wr_ptr_gray_sync2 <= wr_ptr_gray_sync1;
+        end
+    end
+
+    // ================= STATUS LOGIC BLOCK =================
+    wire [ADDR_WIDTH:0] wr_bin_sync = gray2bin(wr_ptr_gray_sync2);
+    wire [ADDR_WIDTH:0] rd_bin_sync = gray2bin(rd_ptr_gray_sync2);
+
+    assign full =
+        (bin2gray(wr_ptr_bin + 1) ==
+        {~rd_ptr_gray_sync2[ADDR_WIDTH:ADDR_WIDTH-1],
+          rd_ptr_gray_sync2[ADDR_WIDTH-2:0]});
+
+    assign empty = (rd_ptr_gray == wr_ptr_gray_sync2);
+
+    wire [ADDR_WIDTH:0] fifo_count = wr_ptr_bin - rd_bin_sync;
+
+     assign almost_empty = (fifo_count <= 1) && !empty;
+     assign almost_full  = (fifo_count >= (DEPTH - 2)) && !full;
+
+
+endmodule
+
+
 
 
 
