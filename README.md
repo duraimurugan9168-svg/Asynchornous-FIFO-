@@ -159,6 +159,14 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 <h3><u>TECHNOLOGY VIEW:</u></h3>
 <img width="1918" height="1024" alt="Screenshot 2026-01-09 121850" src="https://github.com/user-attachments/assets/4a237d29-43f6-4ee9-89f8-0804eb0a3259" />
 
+<h3><u>SCHEMATIC VIEW:</u></h3>
+
+
+<h3><u>PORT DECLARATIONS:</u></h3>
+
+
+<h3><u>FILE STRUCTURE:</u></h3>
+
 
 
 
