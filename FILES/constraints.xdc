@@ -12,13 +12,13 @@ set_property PACKAGE_PIN T18 [get_ports rst]
 set_property IOSTANDARD LVCMOS33 [get_ports rst]
 
 ############################################
-# WRITE ENABLE (BTNC push button)
+# START/STOP (BTNC push button)
 ############################################
 set_property PACKAGE_PIN P16 [get_ports sw_wr]
 set_property IOSTANDARD LVCMOS33 [get_ports sw_wr]
 
 ############################################
-# READ ENABLE (BTNR push button)
+# UNUSED (BTNR push button)
 ############################################
 set_property PACKAGE_PIN R18 [get_ports sw_rd]
 set_property IOSTANDARD LVCMOS33 [get_ports sw_rd]
