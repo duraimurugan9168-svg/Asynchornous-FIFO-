@@ -4,6 +4,12 @@
                
 This project implements a parameterized Asynchronous FIFO in Verilog for reliable data transfer across independent clock domains. It ensures CDC safety by using Gray-code pointers and 2-FF synchronizers to prevent metastability. The design generates stable Full/Empty flags and is fully configurable for various data widths and depths. Functionality is verified through simulations covering wrap-around and simultaneous R/W boundary conditions.
 
+<h3><u> Table of contents: </u></h3>
+**Key contents:**
+
+- [Ptoblem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
+- [Features](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#features)
+
 <h3><u>PROBLEM STATEMENT:</u></h3>
 
 In multi-clock digital systems, direct data transfer between asynchronous clock domains can cause metastability and data corruption.
@@ -17,13 +23,6 @@ Conditions: 1.Set
             2.Reset
             
 States    : INPUT → WRITE → READ → OUTPUT
-
-<h3><u> Table of contents: </u></h3>
-**Key contents:**
-
-- [Project overview](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#project-overview)
-- [Ptoblem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
-- [Features](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#features)
 
 
 <h3><u>FEATURES:</u></h3>
