@@ -143,6 +143,43 @@ The below image indicates the FIFO states
 
 **UNDERFLOW:** This occurs if the system attempts to read data when the state is EMPTY. This results in invalid data being passed to the next stage.
 
+<h3><u>FIFO TIMING TABLE:</u></h3>
+
+| Time (s) | Write | Read | FIFO Cnt | State                  | OUT |
+|----------|-------|------|----------|------------------------|-----|
+| 0        | –     | –    | 0        | IDLE                   | ❌  |
+| 1        | W1    | –    | 1        | EMPTY_WAIT             | ❌  |
+| 2        | W2    | –    | 2        | EMPTY_WAIT             | ❌  |
+| 3        | W3    | –    | 3        | EMPTY_WAIT (decision)  | ❌  |
+| 4        | W4    | –    | 4        | WRITE_MODE             | ❌  |
+| 5        | W5    | –    | 5        | WRITE_MODE             | ❌  |
+| 6        | W6    | R1   | 5        | WRITE_MODE             | ✅  |
+| 7        | W7    | –    | 6        | WRITE_MODE             | ❌  |
+| 8        | W8    | R2   | 6        | WRITE_MODE             | ✅  |
+| 9        | W9    | –    | 7 (FULL) | FULL_WAIT              | ❌  |
+| 10       | –     | R3   | 6        | FULL_WAIT              | ✅  |
+| 11       | –     | –    | 6        | FULL_WAIT              | ❌  |
+| 12       | –     | R4   | 5        | FULL_WAIT              | ✅  |
+| 13       | –     | –    | 5        | FULL_WAIT              | ❌  |
+| 14       | –     | R5   | 4        | FULL_WAIT (decision)   | ✅  |
+| 15       | W10   | –    | 5        | WRITE_MODE             | ❌  |
+| 16       | W11   | R6   | 5        | WRITE_MODE             | ✅  |
+| 17       | W12   | –    | 6        | WRITE_MODE             | ❌  |
+| 18       | W13   | R7   | 6        | WRITE_MODE             | ✅  |
+| 19       | W14   | –    | 7 (FULL) | FULL_WAIT              | ❌  |
+| 20       | –     | R8   | 6        | FULL_WAIT              | ✅  |
+| 21       | –     | –    | 6        | FULL_WAIT              | ❌  |
+| 22       | –     | R9   | 5        | FULL_WAIT              | ✅  |
+| 23       | –     | –    | 5        | FULL_WAIT              | ❌  |
+| 24       | –     | R10  | 4        | FULL_WAIT (decision)   | ✅  |
+| 25       | W15   | –    | 5        | WRITE_MODE             | ❌  |
+| 26       | W16   | R11  | 5        | WRITE_MODE             | ✅  |
+| 27       | W17   | –    | 6        | WRITE_MODE             | ❌  |
+| 28       | W18   | R12  | 6        | WRITE_MODE             | ✅  |
+| 29       | W19   | –    | 7 (FULL) | FULL_WAIT              | ❌  |
+| 30       | –     | R13  | 6        | FULL_WAIT              | ✅  |
+
+
 <h3><u>DESIGN:</u></h3>
 This design implements an asynchronous FIFO that allows safe data transfer between two independent clock domains (wr_clk and rd_clk). Design code for Asynchronous FIFO is given below
 
