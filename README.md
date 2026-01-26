@@ -183,7 +183,7 @@ The below image indicates the FIFO states
 <h3><u>DESIGN:</u></h3>
 This design implements an asynchronous FIFO that allows safe data transfer between two independent clock domains (wr_clk and rd_clk). Design code for Asynchronous FIFO is given below
 
-design.v
+[asyncfifo.v](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/e25803a02717f30da43833a0de1aca54d5e8da44/FILES/asyncfifo.v)
 
 <h3><u>TESTBENCH:</u></h3>
 The testbench verifies the functionality of the asynchronous FIFO by generating independent write and read clocks, applying reset, and driving controlled write and read enable signals.
