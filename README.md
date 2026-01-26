@@ -192,14 +192,17 @@ The below image indicates the FIFO states
 | 30       | –     | R13  | 6        | FULL_WAIT              | ✅  |
 
 
-<h3><u> Verilog Implementation:</u>
-  
--**DESIGN:**
+<h3><u>VERILOG IMPLEMENTATION:</u></h3>  
+
+**Design:**
+
 This design implements an asynchronous FIFO that allows safe data transfer between two independent clock domains (wr_clk and rd_clk). Design code for Asynchronous FIFO is given below
 
 [asyncfifo.v](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/e25803a02717f30da43833a0de1aca54d5e8da44/FILES/asyncfifo.v)
 
--**TESTBENCH:**
+**Testbench:**
+
+
 The testbench verifies the functionality of the asynchronous FIFO by generating independent write and read clocks, applying reset, and driving controlled write and read enable signals.
 The Testbench code for Asyynchronous FIFO is given below
 
