@@ -209,20 +209,24 @@ The Testbench code for Asyynchronous FIFO is given below
 
 [tb_asyncfifo.v](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/dc1fc3ffead233bdd8a9f80220b244209f044258/FILES/tb_asyncfifo.v)
 
-<h3><u>SIMULATION AND WAVEFORM:</u></h3>
+<h3><u>SIMULATION:</u></h3>
+
+**WAVEFORM:**
+
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 <img width="1919" height="1030" alt="Screenshot 2026-01-09 121448" src="https://github.com/user-attachments/assets/81e0a436-21f1-4e77-87ca-c9984ef71c64" />
 
-<h3><u>TECHNICAL VIEW:</u></h3>
+**Technical View:**
+
 <img width="2550" height="3300" alt="TECHNICAL VIEW" src="https://github.com/user-attachments/assets/cc7ff76d-0e61-4385-89ab-9147d70c130d" />
 
 
 
 
-<h3><u>SCHEMATIC VIEW:</u></h3>
+**Schematic View:**
 <img width="3300" height="2550" alt="SCHEMATIC VIEW" src="https://github.com/user-attachments/assets/f1aaabf2-ea27-4986-a19d-1cc3e8e07cb0" />
 
-<h3><u>FILE STRUCTURE:</u></h3>
+**File Structure:**
 
 <img width="1115" height="632" alt="File structure" src="https://github.com/user-attachments/assets/407967f0-7493-41d1-83c8-5d3e488eb32e" />
 
