@@ -221,7 +221,10 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 
 **Output Video:**
+
 The output video of Asynchrnous FIFO is given below
+
+
 [Output video](https://drive.google.com/file/d/1viKmUqhM3-F26fnSBRfTKp3kEVEVbU0f/view?usp=drive_link)
 
 
