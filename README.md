@@ -233,10 +233,6 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 
 
-<h3><u>CONCLUSION:</u></h3>
-
-This project successfully demonstrates the design and verification of an Asynchronous FIFO for reliable data transfer between two independent clock domains. By using Gray-coded read and write pointers along with dual flip-flop synchronizers, the design effectively mitigates metastability issues common in CDC systems. The FIFO correctly generates Full, Empty, Almost Full, and Almost Empty flags, ensuring safe and efficient flow control. Simulation results confirm correct operation during normal, boundary, and wrap-around conditions. This implementation provides a robust and scalable solution suitable for real-time embedded and FPGA-based communication systems.
-
 <h3><u>CONTRIBUTORS:</u></h3>
 
 Durai Murugan M , Bannari Amman Institute of Technology     [LinkedIn](https://www.linkedin.com/in/durai-murugan-859b67354)
@@ -250,6 +246,13 @@ Harish P , Bannari Amman Institute of Technology           [LinkedIn](https://ww
 
 
 Velmurugan R , Bannari Amman Institute of Technology       [LinkedIn](https://www.linkedin.com/in/velmurugan-r-43b0b2355)
+
+
+
+<h3><u>CONCLUSION:</u></h3>
+
+This project successfully demonstrates the design and verification of an Asynchronous FIFO for reliable data transfer between two independent clock domains. By using Gray-coded read and write pointers along with dual flip-flop synchronizers, the design effectively mitigates metastability issues common in CDC systems. The FIFO correctly generates Full, Empty, Almost Full, and Almost Empty flags, ensuring safe and efficient flow control. Simulation results confirm correct operation during normal, boundary, and wrap-around conditions. This implementation provides a robust and scalable solution suitable for real-time embedded and FPGA-based communication systems.
+
 
 
 
