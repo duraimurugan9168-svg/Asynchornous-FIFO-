@@ -10,8 +10,8 @@ This project implements a parameterized Asynchronous FIFO in Verilog for reliabl
 
 - [Ptoblem statement](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#problem-statement)
 - [Features](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#features)
-- [TOOLS AND HARDWARE](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#tools-and-hardware)
-- 
+- [Tools and Hardware](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#tools-and-hardware)
+- [Block diagram](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/main/README.md#--block-diagram-)
 
 <h3><u>PROBLEM STATEMENT:</u></h3>
 
