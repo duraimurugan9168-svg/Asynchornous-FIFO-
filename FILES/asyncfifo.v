@@ -1,6 +1,7 @@
 `timescale 1ns / 1ps
 
 
+
 module asyncfifo #(
     parameter DATA_WIDTH = 8,
     parameter ADDR_WIDTH = 3,
