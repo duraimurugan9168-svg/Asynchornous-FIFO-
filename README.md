@@ -249,7 +249,7 @@ The Testbench code for Asyynchronous FIFO is given below
 **WAVEFORM:**
 
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
-<img width="1919" height="1024" alt="Output Waveform" src="https://github.com/user-attachments/assets/70cc920f-7f1e-422c-93eb-136576a2b298" />
+<img width="1917" height="1026" alt="Output Waveform" src="https://github.com/user-attachments/assets/a3a330f5-fba1-46dd-8b94-89a03dbeef12" />
 
 **Simulation confirms:**
 
