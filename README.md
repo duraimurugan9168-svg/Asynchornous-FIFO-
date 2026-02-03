@@ -109,10 +109,6 @@ Convert the updated pointer to Gray code
 
 Synchronize the Gray-coded write pointer to the read domain
 
-**On rd_clk (Read Domain):**
-
-
----
 
 ### **Async FIFO Operational Principle (Short)**
 
