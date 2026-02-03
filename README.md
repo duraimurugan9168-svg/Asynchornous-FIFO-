@@ -224,7 +224,8 @@ This waveform represents the functional simulation of an Asynchronous FIFO where
 
 FIFO in Zedboard Zynq 7000 FPGA :
 
-<img width="1572" height="910" alt="Your paragraph text (3)" src="https://github.com/user-attachments/assets/dbf0c509-d748-4127-9702-ea649c423042" />
+<img width="1920" height="1080" alt="Your paragraph text (5)" src="https://github.com/user-attachments/assets/addcd25e-531f-4f07-8926-0254ae437c32" />
+
 
 
 The output Video of Asynchrnous FIFO is given below
