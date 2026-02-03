@@ -180,7 +180,7 @@ The below image indicates the FIFO states
 
 -  **FULL :** The buffer has reached its maximum capacity.
 
-**Error Conditions**
+**Error Conditions:**
 
 -  **OVERFLOW:** This occurs if the system attempts to write (DATA_IN) more data when the state is already FULL. This results in data loss as there is no space left.
 
@@ -251,7 +251,15 @@ The Testbench code for Asyynchronous FIFO is given below
 This waveform represents the functional simulation of an Asynchronous FIFO where write and read operations occur in different clock domains (wr_clk and rd_clk). The FIFO safely transfers data across clock domains using synchronized pointers.
 <img width="1919" height="1024" alt="Output Waveform" src="https://github.com/user-attachments/assets/70cc920f-7f1e-422c-93eb-136576a2b298" />
 
+**Simulation confirms:**
 
+-  Correct CDC synchronization
+
+-  Safe pointer transfer
+
+-  FULL / EMPTY transitions
+
+-  Proper error flag assertion
 
 
 **OUTPUT :**
@@ -263,7 +271,14 @@ FIFO in Zedboard Zynq 7000 FPGA :
 
 
 
-The output Video of Asynchrnous FIFO is given below
+The FIFO was successfully implemented on ZedBoard (Zynq-7000).
+Output behavior was verified using:
+
+-  On-board LEDs
+
+-  Real-time read/write control
+
+**Output demonstration video linked here**
 
 
 [Output video](https://drive.google.com/file/d/1viKmUqhM3-F26fnSBRfTKp3kEVEVbU0f/view?usp=drive_link)
