@@ -149,9 +149,6 @@ Although no global FSM is used, the FIFO implicitly operates in multiple modes, 
 
 **Mode selection is automatic and flag-driven**, requiring no FSM — improving reliability across clock domains.
 
----
-
-
 
 
 **FULL & EMPTY Flag Generation:**
@@ -161,6 +158,9 @@ Indicates no unread data is available
 
 FULL (Write Domain):
 Indicates FIFO has reached maximum capacity
+
+---
+
 
 <h3><u>ASYNCHRNOUS FIFO STATES:</u></h3>
 The below image indicates the FIFO states 
