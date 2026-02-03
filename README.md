@@ -2,7 +2,10 @@
 <h3><u>PROJECT OVERVIEW:</u></h3>
                
                
-This project implements a parameterized Asynchronous FIFO in Verilog for reliable data transfer across independent clock domains. It ensures CDC safety by using Gray-code pointers and 2-FF synchronizers to prevent metastability. The design generates stable Full/Empty flags and is fully configurable for various data widths and depths. Functionality is verified through simulations covering wrap-around and simultaneous R/W boundary conditions.
+This project implements a parameterized Asynchronous FIFO in Verilog HDL for reliable data transfer between independent clock domains.
+The design ensures Clock Domain Crossing (CDC) safety using Gray-code pointers and dual flip-flop synchronizers, effectively preventing metastability and data corruption.
+
+The FIFO supports robust flow control, boundary-condition handling, and debug-friendly error signaling, making it suitable for FPGA-based real-time systems and multi-clock SoC designs.
 
 
 ---
@@ -31,19 +34,34 @@ This project addresses the problem by designing a CDC-safe Asynchronous FIFO in 
 The FIFO ensures reliable data transfer using Gray-code pointers and synchronized control logic.
 Correct operation is maintained under clock mismatch, pointer wrap-around, and boundary condition
 
-Inputs    : Binary Input
+Inputs:
 
-Conditions: 1.Set
-            2.Reset
-            
-States    : INPUT → WRITE → READ → OUTPUT
+Binary data input (din)
+
+Conditions:
+
+Reset
+
+Write enable (wr_en)
+
+Read enable (rd_en)
+
+Logical Flow:
+INPUT → WRITE → READ → OUTPUT
 
 
 <h3><u>FEATURES:</u></h3>
 
-**FIFO states:**
-         INPUT → WRITE → READ →  OUTPUT
-         
+ -Fully parameterized FIFO (Data Width & Depth)
+ -Independent write and read clocks
+ -Binary & Gray-code pointer architecture
+ -2-FF synchronizers for CDC safety
+ -Accurate FULL / EMPTY flag generation
+ -Almost Full / Almost Empty early-warning flags
+ -Overflow & Underflow detection with visible pulse stretching
+ -Automatic operational mode selection (Write / Read controlled by flags)
+ -Verified for wrap-around and simultaneous R/W operations
+ 
 **Explanation:**
 
 EMPTY (0): No data, read disabled, write enabled
