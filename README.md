@@ -170,21 +170,21 @@ The below image indicates the FIFO states
 
 
 
-**EMPTY :** The starting state. The buffer contains no data. Any attempt to read from here would typically trigger an Underflow.
+-  **EMPTY :** The starting state. The buffer contains no data. Any attempt to read from here would typically trigger an Underflow.
 
-**ALMOST EMPTY :** Only one slot is filled. This is a critical threshold state often used to signal the consumer to stop reading soon.
+-  **ALMOST EMPTY :** Only one slot is filled. This is a critical threshold state often used to signal the consumer to stop reading soon.
 
-**PARTIALLY FULL OR EMPTY :** The "normal" operating range. The FIFO is neither nearing its maximum capacity nor its empty state.
+-  **PARTIALLY FULL OR EMPTY :** The "normal" operating range. The FIFO is neither nearing its maximum capacity nor its empty state.
 
-**ALMOST FULL :** The buffer is nearing capacity. Only one or two slots remain. This signals the producer to slow down or stop writing.
+-  **ALMOST FULL :** The buffer is nearing capacity. Only one or two slots remain. This signals the producer to slow down or stop writing.
 
-**FULL :** The buffer has reached its maximum capacity.
+-  **FULL :** The buffer has reached its maximum capacity.
 
 **Error Conditions**
 
-**OVERFLOW:** This occurs if the system attempts to write (DATA_IN) more data when the state is already FULL. This results in data loss as there is no space left.
+-  **OVERFLOW:** This occurs if the system attempts to write (DATA_IN) more data when the state is already FULL. This results in data loss as there is no space left.
 
-**UNDERFLOW:** This occurs if the system attempts to read data when the state is EMPTY. This results in invalid data being passed to the next stage.
+-  **UNDERFLOW:** This occurs if the system attempts to read data when the state is EMPTY. This results in invalid data being passed to the next stage.
 
 <h3><u>FIFO TIMING TABLE:</u></h3>
 
