@@ -78,13 +78,6 @@ PARTIALLY FULL (1 → N-1): Some data, read and write both enabled
 
 FULL (N): All entries occupied, write disabled, read enabled
 
-🔸Binary and Gray-code address generation for metastability-resilient pointer movement.
-
-🔸2-flip-flop synchronizers for reliable cross-domain pointer transfer.
-
-🔸Gray↔Binary converters to maintain CDC safety while enabling binary-domain comparisons.
-
-🔸Full/Empty flag logic driven by synchronized pointers.
 
 <h3><u>TOOLS AND HARDWARE:</u></h3>
 
