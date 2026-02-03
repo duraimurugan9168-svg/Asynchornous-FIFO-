@@ -86,6 +86,8 @@ INPUT → WRITE → READ → OUTPUT
 
 **Verification:** Self-checking Testbench
 
+---
+
 <h3><u>  BLOCK DIAGRAM: </u></h3>
 
 The below block diagram shows how the Asynchrnous FIFO works
