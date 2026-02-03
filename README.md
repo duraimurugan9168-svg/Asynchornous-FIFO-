@@ -77,15 +77,15 @@ INPUT → WRITE → READ → OUTPUT
 
 <h3><u>TOOLS AND HARDWARE:</u></h3>
 
-**FPGA:** ZedBoard Zynq-7000
+❖  **FPGA:** ZedBoard Zynq-7000
 
-**HDL Tool:** AMD Vivado 2023 Edition
+❖  **HDL Tool:** AMD Vivado 2023 Edition
 
-**Language:** Verilog HDL
+❖  **Language:** Verilog HDL
 
-**Simulation:** Vivado Simulator
+❖  **Simulation:** Vivado Simulator
 
-**Verification:** Self-checking Testbench
+❖  **Verification:** Self-checking Testbench
 
 ---
 
