@@ -129,7 +129,7 @@ Synchronize the Gray-coded write pointer to the read domain
 
 ---
 
-### **Write Domain (`wr_clk`)**
+ **Write Domain (`wr_clk`)**
 
 * Write when `wr_en = 1` and `full = 0`
 * Actions:
@@ -140,7 +140,7 @@ Synchronize the Gray-coded write pointer to the read domain
 
 ---
 
-### **Read Domain (`rd_clk`)**
+ **Read Domain (`rd_clk`)**
 
 * Read when `rd_en = 1` and `empty = 0`
 * Actions:
