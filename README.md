@@ -105,43 +105,6 @@ The below block diagram shows how the Asynchrnous FIFO works
 - FULL / EMPTY flag generation
 
 
-**Read & Write operations:**
-
-An Asynchronous FIFO enables safe data transfer between two independent clock domains using separate read and write pointers. There is no global FSM; instead, operation is controlled by pointer comparison and FULL/EMPTY flags.
-
-
-
-**Operational Principle**
-
-Write side operates only on wr_clk
-
-Read side operates only on rd_clk
-
-Pointers are maintained in binary (for addressing) and Gray code (for CDC safety)
-
-Gray-coded pointers are synchronized across clock domains using 2-FF synchronizers
-
-**Write & Read — Unified Flow:**
-
-On wr_clk (Write Domain):
-
-A write occurs when:
-
-wr_en = 1
-
-full = 0
-
-
-Actions:
-
-Write data to memory at the current write pointer address
-
-Increment the binary write pointer
-
-Convert the updated pointer to Gray code
-
-Synchronize the Gray-coded write pointer to the read domain
-
 
 ### **Async FIFO Operational Principle (Short)**
 
