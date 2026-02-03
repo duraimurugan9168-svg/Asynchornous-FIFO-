@@ -110,22 +110,49 @@ Convert the updated pointer to Gray code
 Synchronize the Gray-coded write pointer to the read domain
 
 **On rd_clk (Read Domain):**
+Here’s a **clean, shortened version** of that operational principle—tight and to the point 👇
 
-A read occurs when:
+---
 
-rd_en = 1
+### **Async FIFO Operational Principle (Short)**
 
-empty = 0
+* **Write side** operates on `wr_clk`
 
-Actions:
+* **Read side** operates on `rd_clk`
 
-Read data from memory at the current read pointer address
+* Pointers are kept in:
 
-Increment the binary read pointer
+  * **Binary** → memory addressing
+  * **Gray code** → safe clock-domain crossing (CDC)
 
-Convert the updated pointer to Gray code
+* Gray-coded pointers are synchronized across domains using **2-FF synchronizers**
 
-Synchronize the Gray-coded read pointer to the write domain
+---
+
+### **Write Domain (`wr_clk`)**
+
+* Write when `wr_en = 1` and `full = 0`
+* Actions:
+
+  * Write data to memory
+  * Increment write pointer (binary → Gray)
+  * Sync write Gray pointer to read domain
+
+---
+
+### **Read Domain (`rd_clk`)**
+
+* Read when `rd_en = 1` and `empty = 0`
+* Actions:
+
+  * Read data from memory
+  * Increment read pointer (binary → Gray)
+  * Sync read Gray pointer to write domain
+
+---
+
+
+
 
 **FULL & EMPTY Flag Generation:**
 
