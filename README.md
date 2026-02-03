@@ -52,15 +52,23 @@ INPUT → WRITE → READ → OUTPUT
 
 <h3><u>FEATURES:</u></h3>
 
- -Fully parameterized FIFO (Data Width & Depth)
- -Independent write and read clocks
- -Binary & Gray-code pointer architecture
- -2-FF synchronizers for CDC safety
- -Accurate FULL / EMPTY flag generation
- -Almost Full / Almost Empty early-warning flags
- -Overflow & Underflow detection with visible pulse stretching
- -Automatic operational mode selection (Write / Read controlled by flags)
- -Verified for wrap-around and simultaneous R/W operations
+ -  Fully parameterized FIFO (Data Width & Depth)
+ 
+ -  Independent write and read clocks
+ 
+ -  Binary & Gray-code pointer architecture
+ 
+ -  2-FF synchronizers for CDC safety
+ 
+ -  Accurate FULL / EMPTY flag generation
+ 
+ -  Almost Full / Almost Empty early-warning flags
+ 
+ -  Overflow & Underflow detection with visible pulse stretching
+ 
+ -  Automatic operational mode selection (Write / Read controlled by flags)
+ 
+ -  Verified for wrap-around and simultaneous R/W operations
  
 **Explanation:**
 
