@@ -223,6 +223,9 @@ The below image indicates the FIFO states
 | 30       | –     | R13  | 6        | FULL_WAIT              | ✅  |
 
 
+---
+
+
 <h3><u>VERILOG IMPLEMENTATION:</u></h3>  
 
 **Design:**
@@ -238,6 +241,8 @@ The testbench verifies the functionality of the asynchronous FIFO by generating 
 The Testbench code for Asyynchronous FIFO is given below
 
 [tb_asyncfifo.v](https://github.com/SiliconWorks/Asynchornous-FIFO/blob/dc1fc3ffead233bdd8a9f80220b244209f044258/FILES/tb_asyncfifo.v)
+
+---
 
 <h3><u>SIMULATION:</u></h3>
 
@@ -282,6 +287,9 @@ The output Video of Asynchrnous FIFO is given below
 <img width="737" height="663" alt="File structure" src="https://github.com/user-attachments/assets/f27e8576-d47b-452e-a3bb-3bb1f32dfed9" />
 
 
+---
+
+
 
 
 <h3><u>CONTRIBUTORS:</u></h3>
@@ -299,6 +307,8 @@ Harish P , Bannari Amman Institute of Technology           [LinkedIn](https://ww
 
 Velmurugan R , Bannari Amman Institute of Technology       [LinkedIn](https://www.linkedin.com/in/velmurugan-r-43b0b2355)
 
+---
+
 
 
 <h3><u>CONCLUSION:</u></h3>
@@ -306,13 +316,15 @@ Velmurugan R , Bannari Amman Institute of Technology       [LinkedIn](https://ww
 This project successfully demonstrates the design and verification of an Asynchronous FIFO for reliable data transfer between two independent clock domains. By using Gray-coded read and write pointers along with dual flip-flop synchronizers, the design effectively mitigates metastability issues common in CDC systems. The FIFO correctly generates Full, Empty, Almost Full, and Almost Empty flags, ensuring safe and efficient flow control. Simulation results confirm correct operation during normal, boundary, and wrap-around conditions. This implementation provides a robust and scalable solution suitable for real-time embedded and FPGA-based communication systems.
 
 
-
+---
 
 
 
 **NOTES:**
 
 This project improved my understanding of clock domain crossing issues and the practical use of Gray code and synchronizers in FPGA designs. It also strengthened my skills in Verilog coding, simulation, and debugging timing-related problems.
+
+---
 
 
 
