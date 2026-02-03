@@ -87,7 +87,9 @@ FULL (N): All entries occupied, write disabled, read enabled
 
 **Language:** Verilog HDL
 
-**Verification:** Vivado Simulator / Testbench for functional validation
+**Simulation:** Vivado Simulator
+
+**Verification:** Self-checking Testbench
 
 <h3><u>  BLOCK DIAGRAM: </u></h3>
 
