@@ -309,23 +309,23 @@ Output behavior was verified using:
 
 <h3><u>CONTRIBUTORS:</u></h3>
 
-Durai Murugan M , Bannari Amman Institute of Technology     [LinkedIn](https://www.linkedin.com/in/durai-murugan-859b67354)
+**Durai Murugan M** , Bannari Amman Institute of Technology     [LinkedIn](https://www.linkedin.com/in/durai-murugan-859b67354)
 
 
 
-Vasan T , Bannari Amman Institute of Technology            [LinkedIn](https://www.linkedin.com/in/vasan-t-7225x)
+**Vasan T** , Bannari Amman Institute of Technology            [LinkedIn](https://www.linkedin.com/in/vasan-t-7225x)
 
 
 
-Harish P , Bannari Amman Institute of Technology           [LinkedIn](https://www.linkedin.com/in/harish-p-493476355)
+**Harish P** , Bannari Amman Institute of Technology           [LinkedIn](https://www.linkedin.com/in/harish-p-493476355)
 
 
-Velmurugan R , Bannari Amman Institute of Technology       [LinkedIn](https://www.linkedin.com/in/velmurugan-r-43b0b2355)
+**Velmurugan R** , Bannari Amman Institute of Technology       [LinkedIn](https://www.linkedin.com/in/velmurugan-r-43b0b2355)
 
 
 We are grateful to our VLSI faculty for his consistent support and valuable guidance throughout the project.
 
-Dr.Elango Sekar [[Linkedin](https://www.linkedin.com/in/elango-sekar-8973b958/)]  [[Github](https://github.com/eceelango)]
+**Dr.Elango Sekar** [[Linkedin](https://www.linkedin.com/in/elango-sekar-8973b958/)]  [[Github](https://github.com/eceelango)] 
 
 Associate Professor,Department of ECE ,Bannari Amman Institute Of Technology.
 
