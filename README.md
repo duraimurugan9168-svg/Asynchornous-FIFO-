@@ -327,7 +327,7 @@ We are grateful to our VLSI faculty for his consistent support and valuable guid
 
 **Dr.Elango Sekar** 
 
-🔗[[Linkedin](https://www.linkedin.com/in/elango-sekar-8973b958/)]  **|**🔗[[Github](https://github.com/eceelango)] 
+🔗[[Linkedin](https://www.linkedin.com/in/elango-sekar-8973b958/)]   **|**  🔗[[Github](https://github.com/eceelango)] 
 
 Associate Professor , Department of ECE 
 Bannari Amman Institute Of Technology.
